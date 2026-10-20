@@ -6,6 +6,7 @@
   command = "npm run dev"
   port = 5174
 
+# Redirects for admin and user page routing
 [[redirects]]
   from = "/gg-admin/*"
   to = "/index.html"
