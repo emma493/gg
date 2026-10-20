@@ -7,13 +7,8 @@
   port = 5174
 
 [[redirects]]
-  from = "/gg-admin"
-  to = "/gg-admin/dashboard"
-  status = 302
-
-[[redirects]]
   from = "/gg-admin/*"
-  to = "/gg-admin/index.html"
+  to = "/index.html"
   status = 200
 
 [[redirects]]

