@@ -1,0 +1,13 @@
+{
+  "name": "gg-project",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "vite build --config gg-admin/vite.config.ts && vite build --config shatta-wale/vite.config.ts",
+    "dev": "vite --config gg-admin/vite.config.ts"
+  },
+  "devDependencies": {
+    "vite": "^6.2.3"
+  }
+}

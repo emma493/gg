@@ -1,0 +1,32 @@
+[build]
+  command = "npm install && npm run build"
+  publish = "dist"
+
+[dev]
+  command = "npm run dev"
+  port = 5174
+
+[[redirects]]
+  from = "/gg-admin"
+  to = "/gg-admin/dashboard"
+  status = 302
+
+[[redirects]]
+  from = "/gg-admin/*"
+  to = "/gg-admin/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/shatta-wale"
+  to = "/shatta-wale/"
+  status = 302
+
+[[redirects]]
+  from = "/shatta-wale/*"
+  to = "/shatta-wale/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/"
+  to = "/gg-admin/login"
+  status = 302
