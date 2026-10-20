@@ -1,0 +1,6 @@
+/gg-admin    /gg-admin/dashboard   302
+/gg-admin/*  /gg-admin/index.html  200
+/shatta-wale /shatta-wale/         302
+/shatta-wale/ /shatta-wale/index.html 200
+/shatta-wale/* /shatta-wale/index.html 200
+/    /gg-admin/login   302
